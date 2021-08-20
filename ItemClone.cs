@@ -99,7 +99,7 @@ namespace ItemClone
                 return;
             }
             Item item = TShock.Utils.GetItemById(netItem.NetId);
-            bool succ = plr.GiveItemCheck(netItem.NetId, item.Name, netItem.Stack, netItem.PrefixId);
+            bool succ = plr.GiveItemCheck(netItem.NetId, item.Name, item.maxStack, netItem.PrefixId);
             if (!succ)
             {
                 plr.SendErrorMessage("你不能获取这个物品！");
